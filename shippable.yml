@@ -25,4 +25,4 @@ after_success:
 script:
  - bundle exec rake
 
-cache:true
+cache: true
