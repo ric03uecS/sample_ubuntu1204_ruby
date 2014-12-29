@@ -9,6 +9,8 @@ env:
  - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
  
 before_install:
+ - apt-get -y install sudo python-software-properties
+ - ./install_mysql.sh
  - source ~/.rvm/scripts/rvm
  - rvm install $SHIPPABLE_RUBY --verify-downloads 1
  - source ~/.bashrc && ~/.rvm/scripts/rvm && rvm use $SHIPPABLE_RUBY
